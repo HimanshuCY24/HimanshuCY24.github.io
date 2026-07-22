@@ -1,0 +1,614 @@
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+
+/* Fade Up */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+transform:translateY(60px);
+
+}
+
+100%{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes fadeLeft{
+
+0%{
+
+opacity:0;
+transform:translateX(-80px);
+
+}
+
+100%{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes fadeRight{
+
+0%{
+
+opacity:0;
+transform:translateX(80px);
+
+}
+
+100%{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes zoomIn{
+
+0%{
+
+opacity:0;
+transform:scale(.6);
+
+}
+
+100%{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 10px #00E5FF;
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 30px #00E5FF,
+
+0 0 60px #00FF99,
+
+0 0 100px #2979FF;
+
+}
+
+100%{
+
+box-shadow:0 0 10px #00E5FF;
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes rotate{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+/* =============================== */
+
+@keyframes gradientMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero-text{
+
+animation:fadeLeft 1s ease;
+
+}
+
+.hero-image{
+
+animation:fadeRight 1.2s ease;
+
+}
+
+.hero-image img{
+
+animation:
+
+float 5s ease-in-out infinite,
+
+glow 4s infinite;
+
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:100%;
+
+height:100%;
+
+background:
+
+rgba(255,255,255,.25);
+
+transform:skewX(-30deg);
+
+transition:.6s;
+
+}
+
+.btn:hover::before{
+
+left:130%;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* ======================================================
+   SOCIAL
+====================================================== */
+
+.social-links a{
+
+transition:.4s;
+
+}
+
+.social-links a:hover{
+
+animation:pulse .7s;
+
+}
+
+/* ======================================================
+   GLASS CARD
+====================================================== */
+
+.glass{
+
+transition:.4s;
+
+}
+
+.glass:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+
+0 20px 45px rgba(0,229,255,.15);
+
+}
+
+/* ======================================================
+   PROJECT CARD
+====================================================== */
+
+.project-card{
+
+transition:.4s;
+
+overflow:hidden;
+
+}
+
+.project-card img{
+
+transition:.5s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.project-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* ======================================================
+   CERTIFICATE CARD
+====================================================== */
+
+.cert-card{
+
+transition:.35s;
+
+}
+
+.cert-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+/* ======================================================
+   SKILL CARD
+====================================================== */
+
+.skill-card{
+
+transition:.35s;
+
+}
+
+.skill-card:hover{
+
+transform:translateY(-10px);
+
+border-color:#00E5FF;
+
+}
+
+/* ======================================================
+   PROGRESS BAR
+====================================================== */
+
+.skill-progress{
+
+height:8px;
+
+background:#1F2937;
+
+border-radius:50px;
+
+overflow:hidden;
+
+margin-top:12px;
+
+}
+
+.skill-progress span{
+
+display:block;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+#00E5FF,
+
+#00FF99
+
+);
+
+animation:loadBar 2s forwards;
+
+}
+
+@keyframes loadBar{
+
+from{
+
+width:0;
+
+}
+
+}
+
+/* ======================================================
+   SECTION TITLE
+====================================================== */
+
+.section-title{
+
+animation:fadeUp .8s ease;
+
+}
+
+/* ======================================================
+   TIMELINE
+====================================================== */
+
+.timeline-item{
+
+animation:fadeUp 1s ease;
+
+}
+
+/* ======================================================
+   TERMINAL
+====================================================== */
+
+.cursor{
+
+display:inline-block;
+
+width:8px;
+
+height:20px;
+
+background:#00FF99;
+
+animation:blink .8s infinite;
+
+}
+
+/* ======================================================
+   LOADER
+====================================================== */
+
+.loader{
+
+animation:pulse 1.5s infinite;
+
+}
+
+/* ======================================================
+   HOVER GLOW
+====================================================== */
+
+.neon:hover{
+
+box-shadow:
+
+0 0 15px #00E5FF,
+
+0 0 40px #00E5FF,
+
+0 0 70px #00FF99;
+
+}
+
+/* ======================================================
+   SCROLL REVEAL
+====================================================== */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ======================================================
+   TEXT GRADIENT
+====================================================== */
+
+.gradient-text{
+    background: linear-gradient(90deg,#00E5FF,#00FF99,#2979FF);
+    background-size:300%;
+
+    /* Standard property */
+    background-clip: text;
+
+    /* WebKit support */
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 6s infinite;
+}
+
+/* ======================================================
+   IMAGE BORDER
+====================================================== */
+
+.hero-image img:hover{
+
+transform:scale(1.04);
+
+transition:.5s;
+
+}
+
+/* ======================================================
+   ICON ROTATE
+====================================================== */
+
+.rotate:hover{
+
+animation:rotate 1s linear;
+
+}
+
+/* ======================================================
+   CARD SHADOW
+====================================================== */
+
+.card-hover{
+
+transition:.4s;
+
+}
+
+.card-hover:hover{
+
+box-shadow:
+
+0 15px 45px rgba(0,229,255,.15);
+
+transform:translateY(-12px);
+
+}
+
+/* =====================================
+   TIMELINE ANIMATION
+===================================== */
+
+.timeline-item{
+
+    opacity:0;
+    animation:fadeUp 1s forwards;
+
+}
+
+.timeline-item:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+.timeline-item:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.timeline-item:nth-child(3){
+
+    animation-delay:.8s;
+
+}
